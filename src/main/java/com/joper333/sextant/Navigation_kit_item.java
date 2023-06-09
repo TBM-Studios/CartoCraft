@@ -33,7 +33,7 @@ public class Navigation_kit_item extends Item{
 
     public int getMaxUseTime(ItemStack stack) {
         return 24000;
-    }
+    }ggg
 
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BOW;
