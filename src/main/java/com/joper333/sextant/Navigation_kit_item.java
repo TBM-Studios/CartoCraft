@@ -24,7 +24,7 @@ public class Navigation_kit_item extends Item{
 
     private float radians;
     private float pitch;
-    private float yaw;
+    private float yaw;test
 
     public Navigation_kit_item(Settings settings) {
         super(settings);
