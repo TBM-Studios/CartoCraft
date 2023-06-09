@@ -1,41 +1,42 @@
 {
-  "schemaVersion": 1,
-  "id": "sextant",
-  "version": "${version}",
-
-  "name": "Immersive Travel Overhaul",
-  "description": "this mod overhauls the coordinate system to make a more immersive form of travel",
-  "authors": [
+	"schemaVersion": 1,
+	"id": "cartocraft",
+	"version": "${version}",
+	"name": "CartoCraft",
+	"description": "Navigate and explore with precision.",
+	"authors": [
+    "TBM Studios"
+	],
+	"contributors": [
+   	"TheButterbrotMan",
+   	"MikhailTapio",
     "joper333"
-  ],
-  "contact": {
-    "homepage": "",
-    "sources": ""
-  },
-
-  "license": "public domain",
-  "icon": "assets/sextant/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.joper333.sextant.Sextant"
-    ],
-    "client": [
-      "com.joper333.sextant.SextantC"
-    ]
-  },
-  "mixins": [
-    "sextant.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.21",
-    "fabric": "*",
-    "minecraft": "~1.20",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	],
+	"contact": {
+		"sources": "https://github.com/TBM-Studios/CartoCraft"
+		"issues": "https://github.com/TBM-Studios/CartoCraft/issues"
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/cartocraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.joper333.sextant.Sextant"
+		],
+		"client": [
+			"com.joper333.sextant.SextantC"
+		]
+	},
+	"mixins": [
+		"sextant.mixins.json",
+		{
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
 }
