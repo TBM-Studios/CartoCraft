@@ -1,42 +1,41 @@
 {
-	"schemaVersion": 1,
-	"id": "cartocraft",
-	"version": "${version}",
-	"name": "CartoCraft",
-	"description": "Navigate and explore with precision.",
-	"authors": [
+  "schemaVersion": 1,
+  "id": "cartocraft",
+  "version": "${version}",
+  "name": "CartoCraft",
+  "description": "Navigate and explore with precision.",
+  "authors": [
     "TBM Studios"
-	],
-	"contributors": [
-   	"TheButterbrotMan",
-   	"MikhailTapio",
+  ],
+  "contributors": [
+    "TheButterbrotMan",
+    "MikhailTapio",
     "joper333"
-	],
-	"contact": {
-		"sources": "https://github.com/TBM-Studios/CartoCraft"
-		"issues": "https://github.com/TBM-Studios/CartoCraft/issues"
-	},
-	"license": "All Rights Reserved",
-	"icon": "assets/cartocraft/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.joper333.sextant.Sextant"
-		],
-		"client": [
-			"com.joper333.sextant.SextantC"
-		]
-	},
-	"mixins": [
-		"sextant.mixins.json",
-		{
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
+  ],
+  "contact": {
+    "sources": "https://github.com/TBM-Studios/CartoCraft",
+    "issues": "https://github.com/TBM-Studios/CartoCraft/issues"
+  },
+  "license": "All Rights Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.joper333.sextant.Sextant"
+    ],
+    "client": [
+      "com.joper333.sextant.SextantC"
+    ]
+  },
+  "mixins": [
+    "sextant.mixins.json",
+    {
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
 }

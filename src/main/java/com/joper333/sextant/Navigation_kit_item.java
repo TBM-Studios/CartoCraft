@@ -1,8 +1,6 @@
 package com.joper333.sextant;
 
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -10,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableTextContent;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -24,7 +21,7 @@ public class Navigation_kit_item extends Item{
 
     private float radians;
     private float pitch;
-    private float yaw;test
+    private float yaw;
 
     public Navigation_kit_item(Settings settings) {
         super(settings);
@@ -33,7 +30,7 @@ public class Navigation_kit_item extends Item{
 
     public int getMaxUseTime(ItemStack stack) {
         return 24000;
-    }ggg
+    }
 
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BOW;
