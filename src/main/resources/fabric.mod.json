@@ -3,14 +3,13 @@
   "id": "cartocraft",
   "version": "${version}",
   "name": "CartoCraft",
-  "description": "Navigate and explore with precision.",
+  "description": "",
   "authors": [
     "TBM Studios"
   ],
   "contributors": [
     "TheButterbrotMan",
-    "MikhailTapio",
-    "joper333"
+    "MikhailTapio"
   ],
   "contact": {
     "sources": "https://github.com/TBM-Studios/CartoCraft",
@@ -20,22 +19,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.joper333.sextant.Sextant"
     ],
     "client": [
-      "com.joper333.sextant.SextantC"
     ]
   },
   "mixins": [
-    "sextant.mixins.json",
-    {
-      "environment": "client"
-    }
+    "cartocraft.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.21",
+    "fabricloader": "*",
     "minecraft": "~1.20",
-    "java": ">=17",
-    "fabric-api": "*"
+    "java": ">=17"
   }
 }

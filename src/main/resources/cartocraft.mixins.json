@@ -1,11 +1,10 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.joper333.sextant.mixins",
+  "package": "io.github.tbmstudios.cartocraft.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": ["Coordinates","Spyglass"
-  ],
-  "client": ["Coordinates","Spyglass"
+  "client": [
+    "MixinDebugHud"
   ],
   "injectors": {
     "defaultRequire": 0
