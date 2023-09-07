@@ -8,6 +8,7 @@
     "TBM Studios"
   ],
   "contributors": [
+    "Joper333",
     "TheButterbrotMan",
     "MikhailTapio"
   ],
@@ -19,6 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
+      "io.github.tbmstudios.cartocraft.common.CartoCraft"
     ],
     "client": [
     ]

@@ -1,0 +1,5 @@
+{
+  "item.cartocraft.sextant": "Sextant",
+  "msg.cartocraft.sextant.position": "Position---X: %1$s Z: %2$s",
+  "tooltip.cartocraft.sextant": "Use this item to locate yourself by pointing it at the sun"
+}
