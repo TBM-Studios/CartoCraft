@@ -15,7 +15,8 @@ public class CartoCraft implements ModInitializer {
         ItemGroupEvents.MODIFY_ENTRIES_ALL.register(((group, entries) -> {
             Registries.ITEM_GROUP.getKey(group).ifPresent(k -> {
                 if (k.equals(ItemGroups.TOOLS)) {
-                    entries.add(ItemRef.SEXTANT.asItem().getDefaultStack());
+                    entries.add(ItemRef.BAROMETER.get().getDefaultStack());
+                    entries.add(ItemRef.SEXTANT.get().getDefaultStack());
                 }
             });
         }));

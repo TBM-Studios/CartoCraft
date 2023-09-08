@@ -1,17 +1,19 @@
 package io.github.tbmstudios.cartocraft.common.item.init;
 
 import io.github.tbmstudios.cartocraft.common.CartoCraft;
+import io.github.tbmstudios.cartocraft.common.item.impl.BarometerItem;
 import io.github.tbmstudios.cartocraft.common.item.impl.SextantItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import java.util.Locale;
+import java.util.function.Supplier;
 
-public enum ItemRef implements ItemConvertible {
-    SEXTANT(new SextantItem());
+public enum ItemRef implements Supplier<Item> {
+    SEXTANT(new SextantItem()),
+    BAROMETER(new BarometerItem());
     private final Item item;
 
     ItemRef(Item item) {
@@ -20,7 +22,7 @@ public enum ItemRef implements ItemConvertible {
 
     public static void init() {
         final ItemRef[] refs = ItemRef.values();
-        for (final ItemRef ref : refs) Registry.register(Registries.ITEM, ref.getId(), ref.asItem());
+        for (final ItemRef ref : refs) Registry.register(Registries.ITEM, ref.getId(), ref.get());
     }
 
     public Identifier getId() {
@@ -28,7 +30,7 @@ public enum ItemRef implements ItemConvertible {
     }
 
     @Override
-    public Item asItem() {
+    public Item get() {
         return item;
     }
 }

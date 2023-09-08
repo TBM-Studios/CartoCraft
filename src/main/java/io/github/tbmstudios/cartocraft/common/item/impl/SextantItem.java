@@ -43,8 +43,8 @@ public class SextantItem extends Item implements ISpyglassLike {
 
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-        if (!(user instanceof PlayerEntity player)) return;
-        if (world.isClient) return;
+        super.onStoppedUsing(stack, world, user, remainingUseTicks);
+        if (world.isClient || !(user instanceof PlayerEntity player)) return;
         if (!world.getRegistryKey().equals(World.OVERWORLD)) {
             world.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.ITEM_SPYGLASS_STOP_USING, SoundCategory.PLAYERS, 1.0F, 1.0F);
@@ -61,9 +61,10 @@ public class SextantItem extends Item implements ISpyglassLike {
         yaw = Math.round(yaw);
         if (yaw >= 88 && yaw <= 92 && pitch >= skyAngle - 2 && pitch <= skyAngle + 2 || yaw >= -92 && yaw <= -88 && pitch >= skyAngle - 2 && pitch <= skyAngle + 2 ||
                 yaw >= 88 && yaw <= 92 && pitch >= skyAngleN - 2 && pitch <= skyAngleN + 2 || yaw >= -92 && yaw <= -88 && pitch >= skyAngleN - 2 && pitch <= skyAngleN + 2) {
+            player.getItemCooldownManager().set(this, 60);
             world.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.ITEM_BOOK_PAGE_TURN, SoundCategory.PLAYERS, 1.0F, 1.0F);
-            player.sendMessage(Text.translatable("msg.cartocraft.sextant.position", x, z), true);
+            player.sendMessage(Text.translatable("msg.cartocraft.position", x, z), true);
         } else world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.ITEM_SPYGLASS_STOP_USING, SoundCategory.PLAYERS, 1.0F, 1.0F);
     }
