@@ -8,13 +8,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.util.Locale;
+
 public enum ItemRef implements ItemConvertible {
-    SEXTANT("sextant", new SextantItem());
-    private final Identifier id;
+    SEXTANT(new SextantItem());
     private final Item item;
 
-    ItemRef(String id, Item item) {
-        this.id = new Identifier(CartoCraft.MODID, id);
+    ItemRef(Item item) {
         this.item = item;
     }
 
@@ -24,7 +24,7 @@ public enum ItemRef implements ItemConvertible {
     }
 
     public Identifier getId() {
-        return id;
+        return new Identifier(CartoCraft.MODID, this.name().toLowerCase(Locale.ROOT));
     }
 
     @Override
