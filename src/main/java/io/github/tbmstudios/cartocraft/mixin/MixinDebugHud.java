@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 @Mixin(DebugHud.class)
-public class MixinDebugHud {
+public abstract class MixinDebugHud {
     @Shadow
     @Final
     private MinecraftClient client;

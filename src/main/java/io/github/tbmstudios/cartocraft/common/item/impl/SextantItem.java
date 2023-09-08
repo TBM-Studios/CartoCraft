@@ -1,11 +1,13 @@
 package io.github.tbmstudios.cartocraft.common.item.impl;
 
+import io.github.tbmstudios.cartocraft.common.item.api.ISpyglassLike;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
@@ -17,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SextantItem extends Item {
+public class SextantItem extends Item implements ISpyglassLike {
     public SextantItem() {
         super(new Settings().maxCount(1));
     }
@@ -34,7 +36,8 @@ public class SextantItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        player.playSound(SoundEvents.ITEM_SPYGLASS_USE, 1.0F, 1.0F);
+        if (!world.isClient) world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                SoundEvents.ITEM_SPYGLASS_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
         return ItemUsage.consumeHeldItem(world, player, hand);
     }
 
@@ -43,7 +46,8 @@ public class SextantItem extends Item {
         if (!(user instanceof PlayerEntity player)) return;
         if (world.isClient) return;
         if (!world.getRegistryKey().equals(World.OVERWORLD)) {
-            player.playSound(SoundEvents.ITEM_SPYGLASS_STOP_USING, 1.0F, 1.0F);
+            world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.ITEM_SPYGLASS_STOP_USING, SoundCategory.PLAYERS, 1.0F, 1.0F);
             return;
         }
         final int x = player.getBlockX();
@@ -57,9 +61,11 @@ public class SextantItem extends Item {
         yaw = Math.round(yaw);
         if (yaw >= 88 && yaw <= 92 && pitch >= skyAngle - 2 && pitch <= skyAngle + 2 || yaw >= -92 && yaw <= -88 && pitch >= skyAngle - 2 && pitch <= skyAngle + 2 ||
                 yaw >= 88 && yaw <= 92 && pitch >= skyAngleN - 2 && pitch <= skyAngleN + 2 || yaw >= -92 && yaw <= -88 && pitch >= skyAngleN - 2 && pitch <= skyAngleN + 2) {
-            player.playSound(SoundEvents.ITEM_BOOK_PAGE_TURN, 1.0F, 1.0F);
+            world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.ITEM_BOOK_PAGE_TURN, SoundCategory.PLAYERS, 1.0F, 1.0F);
             player.sendMessage(Text.translatable("msg.cartocraft.sextant.position", x, z), true);
-        } else player.playSound(SoundEvents.ITEM_SPYGLASS_STOP_USING, 1.0F, 1.0F);
+        } else world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                SoundEvents.ITEM_SPYGLASS_STOP_USING, SoundCategory.PLAYERS, 1.0F, 1.0F);
     }
 
     @Override
