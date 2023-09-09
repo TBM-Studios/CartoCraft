@@ -1,10 +1,7 @@
 package io.github.tbmstudios.cartocraft.common.item.init;
 
 import io.github.tbmstudios.cartocraft.common.CartoCraft;
-import io.github.tbmstudios.cartocraft.common.item.impl.BarometerItem;
-import io.github.tbmstudios.cartocraft.common.item.impl.KatometerItem;
-import io.github.tbmstudios.cartocraft.common.item.impl.NavigationKitItem;
-import io.github.tbmstudios.cartocraft.common.item.impl.SextantItem;
+import io.github.tbmstudios.cartocraft.common.item.impl.*;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,8 +13,11 @@ import java.util.function.Supplier;
 public enum ItemRef implements Supplier<Item> {
     SEXTANT(new SextantItem()),
     BAROMETER(new BarometerItem()),
+    MULTI_KATOMETER(new MultiKatometerItem()),
     NAVIGATION_KIT(new NavigationKitItem()),
-    KATOMETER(new KatometerItem());
+    KATOMETER(new KatometerItem()),
+    TELOSMETER(new TelosmeterItem()),
+    VIATOR(new ViatorItem());
     private final Item item;
 
     ItemRef(Item item) {

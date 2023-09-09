@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 
+import java.util.Arrays;
+
 public class CartoCraft implements ModInitializer {
     public static final String MODID = "cartocraft";
 
@@ -13,12 +15,8 @@ public class CartoCraft implements ModInitializer {
     public void onInitialize() {
         ItemRef.init();
         ItemGroupEvents.MODIFY_ENTRIES_ALL.register(((group, entries) -> Registries.ITEM_GROUP.getKey(group).ifPresent(k -> {
-            if (k.equals(ItemGroups.TOOLS)) {
-                entries.add(ItemRef.BAROMETER.get().getDefaultStack());
-                entries.add(ItemRef.SEXTANT.get().getDefaultStack());
-                entries.add(ItemRef.NAVIGATION_KIT.get().getDefaultStack());
-                entries.add(ItemRef.KATOMETER.get().getDefaultStack());
-            }
+            if (k.equals(ItemGroups.TOOLS))
+                Arrays.stream(ItemRef.values()).forEach(r -> entries.add(r.get().getDefaultStack()));
         })));
     }
 }

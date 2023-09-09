@@ -17,14 +17,14 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class KatometerItem extends Item {
-    public KatometerItem() {
+public class ViatorItem extends Item {
+    public ViatorItem() {
         super(new Settings().maxCount(1));
     }
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 25;
+        return 30;
     }
 
     @Override
@@ -40,17 +40,21 @@ public class KatometerItem extends Item {
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         super.onStoppedUsing(stack, world, user, remainingUseTicks);
-        if (world.isClient || !world.getRegistryKey().equals(World.NETHER) || !(user instanceof PlayerEntity player))
-            return;
+        if (world.isClient || !(user instanceof PlayerEntity player)) return;
         player.getItemCooldownManager().set(this, 60);
         world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
-        player.sendMessage(Text.translatable("msg.cartocraft.position", player.getBlockX(), player.getBlockZ()), true);
+        final int distSeaLevel = player.getBlockY() - 63;
+        player.sendMessage(
+                Text.translatable("msg.cartocraft.position", player.getBlockX(), player.getBlockZ())
+                        .append("  |  ")
+                        .append(Text.translatable("msg.cartocraft.sealevel", distSeaLevel))
+                , true);
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable("tooltip.cartocraft.katometer"));
+        tooltip.add(Text.translatable("tooltip.cartocraft.viator"));
     }
 }

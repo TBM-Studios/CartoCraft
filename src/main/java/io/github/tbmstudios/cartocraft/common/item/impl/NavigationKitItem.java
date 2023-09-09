@@ -50,8 +50,6 @@ public class NavigationKitItem extends Item implements ISpyglassLike {
                     SoundEvents.ITEM_SPYGLASS_STOP_USING, SoundCategory.PLAYERS, 1.0F, 1.0F);
             return;
         }
-        final int x = player.getBlockX();
-        final int z = player.getBlockZ();
         final double skyAngle = Math.round(Math.toDegrees(world.getSkyAngleRadians(.0F)));
         float yaw = MathHelper.wrapDegrees(player.getYaw());
         final double skyAngleN = (skyAngle + 180) % 360;
@@ -66,7 +64,7 @@ public class NavigationKitItem extends Item implements ISpyglassLike {
                     SoundEvents.ITEM_BOOK_PAGE_TURN, SoundCategory.PLAYERS, 1.0F, 1.0F);
             final int distSeaLevel = player.getBlockY() - 63;
             player.sendMessage(
-                    Text.translatable("msg.cartocraft.position", x, z)
+                    Text.translatable("msg.cartocraft.position", player.getBlockX(), player.getBlockZ())
                             .append("  |  ")
                             .append(Text.translatable("msg.cartocraft.sealevel", distSeaLevel))
                     , true);

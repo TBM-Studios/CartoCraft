@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cartocraft:katometer"
+    },
+    {
+      "item": "cartocraft:barometer"
+    }
+  ],
+  "result": {
+    "item": "cartocraft:multi_katometer",
+    "count": 1
+  }
+}

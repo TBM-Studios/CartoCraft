@@ -1,12 +1,18 @@
 {
   "item.cartocraft.barometer": "Barometer",
+  "item.cartocraft.multi_katometer": "Multi Katometer",
   "item.cartocraft.navigation_kit": "Navigation Kit",
   "item.cartocraft.katometer": "Katometer",
   "item.cartocraft.sextant": "Sextant",
+  "item.cartocraft.telosmeter": "Telosmeter",
+  "item.cartocraft.viator": "Viator",
   "msg.cartocraft.position": "Position >> X: %1$s Z: %2$s",
   "msg.cartocraft.sealevel": "Distance to the sea level: %s meter(s)",
   "tooltip.cartocraft.barometer": "Use this to confirm your altitude",
+  "tooltip.cartocraft.multi_katometer": "Use this to confirm your position and altitude in the nether",
   "tooltip.cartocraft.navigation_kit": "Use this towards the sun to confirm your position and altitude",
   "tooltip.cartocraft.katometer": "Use this to confirm your position in the nether",
-  "tooltip.cartocraft.sextant": "Use this towards the sun to confirm your position"
+  "tooltip.cartocraft.sextant": "Use this towards the sun to confirm your position",
+  "tooltip.cartocraft.telosmeter": "Use this to confirm your position in the end",
+  "tooltip.cartocraft.viator": "Use this to confirm your position and altitude in any dimension"
 }
