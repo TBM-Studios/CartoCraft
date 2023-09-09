@@ -12,13 +12,12 @@ public class CartoCraft implements ModInitializer {
     @Override
     public void onInitialize() {
         ItemRef.init();
-        ItemGroupEvents.MODIFY_ENTRIES_ALL.register(((group, entries) -> {
-            Registries.ITEM_GROUP.getKey(group).ifPresent(k -> {
-                if (k.equals(ItemGroups.TOOLS)) {
-                    entries.add(ItemRef.BAROMETER.get().getDefaultStack());
-                    entries.add(ItemRef.SEXTANT.get().getDefaultStack());
-                }
-            });
-        }));
+        ItemGroupEvents.MODIFY_ENTRIES_ALL.register(((group, entries) -> Registries.ITEM_GROUP.getKey(group).ifPresent(k -> {
+            if (k.equals(ItemGroups.TOOLS)) {
+                entries.add(ItemRef.BAROMETER.get().getDefaultStack());
+                entries.add(ItemRef.SEXTANT.get().getDefaultStack());
+                entries.add(ItemRef.NAVIGATION_KIT.get().getDefaultStack());
+            }
+        })));
     }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cartocraft:sextant"
+    },
+    {
+      "item": "cartocraft:barometer"
+    }
+  ],
+  "result": {
+    "item": "cartocraft:navigation_kit",
+    "count": 1
+  }
+}

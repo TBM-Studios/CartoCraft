@@ -47,7 +47,7 @@ public class BarometerItem extends Item {
         world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.PLAYERS, 1.0F, .1F);
         final int distSeaLevel = player.getBlockY() - 63;
-        player.sendMessage(Text.translatable("msg.cartocraft.sealevel", distSeaLevel));
+        player.sendMessage(Text.translatable("msg.cartocraft.sealevel", distSeaLevel), true);
     }
 
     @Override

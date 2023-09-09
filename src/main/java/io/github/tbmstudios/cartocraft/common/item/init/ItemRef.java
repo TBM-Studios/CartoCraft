@@ -2,6 +2,7 @@ package io.github.tbmstudios.cartocraft.common.item.init;
 
 import io.github.tbmstudios.cartocraft.common.CartoCraft;
 import io.github.tbmstudios.cartocraft.common.item.impl.BarometerItem;
+import io.github.tbmstudios.cartocraft.common.item.impl.NavigationKitItem;
 import io.github.tbmstudios.cartocraft.common.item.impl.SextantItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -13,7 +14,8 @@ import java.util.function.Supplier;
 
 public enum ItemRef implements Supplier<Item> {
     SEXTANT(new SextantItem()),
-    BAROMETER(new BarometerItem());
+    BAROMETER(new BarometerItem()),
+    NAVIGATION_KIT(new NavigationKitItem());
     private final Item item;
 
     ItemRef(Item item) {
