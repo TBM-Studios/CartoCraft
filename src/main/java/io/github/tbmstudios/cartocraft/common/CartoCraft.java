@@ -17,6 +17,7 @@ public class CartoCraft implements ModInitializer {
                 entries.add(ItemRef.BAROMETER.get().getDefaultStack());
                 entries.add(ItemRef.SEXTANT.get().getDefaultStack());
                 entries.add(ItemRef.NAVIGATION_KIT.get().getDefaultStack());
+                entries.add(ItemRef.KATOMETER.get().getDefaultStack());
             }
         })));
     }
