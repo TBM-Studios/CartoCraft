@@ -11,7 +11,7 @@ import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum ItemRef implements Supplier<Item> {
-    SEXTANT(new SextantItem()),
+    TERRAOSE(new TerraoseItem()),
     BAROMETER(new BarometerItem()),
     INFERNTANT(new InferntantItem()),
     TERRATANT(new TerratantItem()),

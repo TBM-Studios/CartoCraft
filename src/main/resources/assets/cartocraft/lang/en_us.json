@@ -3,7 +3,7 @@
   "item.cartocraft.inferntant": "Inferntant",
   "item.cartocraft.terratant": "Terratant",
   "item.cartocraft.infernose": "Infernose",
-  "item.cartocraft.sextant": "Sextant",
+  "item.cartocraft.terraose": "Terraose",
   "item.cartocraft.voidose": "Voidose",
   "item.cartocraft.voidtant": "Voidtant",
   "msg.cartocraft.position": "Position >> X: %1$s Z: %2$s",
@@ -12,7 +12,7 @@
   "tooltip.cartocraft.inferntant": "Use this to confirm your position and altitude in the nether",
   "tooltip.cartocraft.terratant": "Use this towards the sun to confirm your position and altitude",
   "tooltip.cartocraft.infernose": "Use this to confirm your position in the nether",
-  "tooltip.cartocraft.sextant": "Use this towards the sun to confirm your position",
+  "tooltip.cartocraft.terraose": "Use this towards the sun to confirm your position",
   "tooltip.cartocraft.voidose": "Use this to confirm your position in the end",
   "tooltip.cartocraft.voidtant": "Use this to confirm your position and altitude in any dimension"
 }

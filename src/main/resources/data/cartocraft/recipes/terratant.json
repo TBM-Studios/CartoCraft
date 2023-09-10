@@ -2,7 +2,7 @@
   "type": "crafting_shapeless",
   "ingredients": [
     {
-      "item": "cartocraft:sextant"
+      "item": "cartocraft:terraose"
     },
     {
       "item": "cartocraft:barometer"

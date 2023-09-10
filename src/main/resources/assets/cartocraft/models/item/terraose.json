@@ -1,8 +1,8 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "1": "cartocraft:item/sextant",
-    "particle": "cartocraft:item/sextant"
+    "1": "cartocraft:item/terraose",
+    "particle": "cartocraft:item/terraose"
   },
   "elements": [
     {

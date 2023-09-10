@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "textures": {
     "0": "cartocraft:item/barometer",
-    "1": "cartocraft:item/sextant",
+    "1": "cartocraft:item/terraose",
     "particle": "cartocraft:item/barometer"
   },
   "elements": [
