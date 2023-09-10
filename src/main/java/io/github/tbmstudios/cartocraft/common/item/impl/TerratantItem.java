@@ -19,8 +19,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class NavigationKitItem extends Item implements ISpyglassLike {
-    public NavigationKitItem() {
+public class TerratantItem extends Item implements ISpyglassLike {
+    public TerratantItem() {
         super(new Settings().maxCount(1));
     }
 
@@ -75,6 +75,6 @@ public class NavigationKitItem extends Item implements ISpyglassLike {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable("tooltip.cartocraft.navigation_kit"));
+        tooltip.add(Text.translatable("tooltip.cartocraft.terratant"));
     }
 }

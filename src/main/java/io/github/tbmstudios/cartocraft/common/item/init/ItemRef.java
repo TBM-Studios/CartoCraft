@@ -14,7 +14,7 @@ public enum ItemRef implements Supplier<Item> {
     SEXTANT(new SextantItem()),
     BAROMETER(new BarometerItem()),
     MULTI_KATOMETER(new MultiKatometerItem()),
-    NAVIGATION_KIT(new NavigationKitItem()),
+    TERRATANT(new TerratantItem()),
     KATOMETER(new KatometerItem()),
     TELOSMETER(new TelosmeterItem()),
     VIATOR(new ViatorItem());
