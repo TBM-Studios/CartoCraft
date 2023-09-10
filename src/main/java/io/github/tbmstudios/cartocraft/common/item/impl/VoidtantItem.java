@@ -17,8 +17,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ViatorItem extends Item {
-    public ViatorItem() {
+public class VoidtantItem extends Item {
+    public VoidtantItem() {
         super(new Settings().maxCount(1));
     }
 
@@ -55,6 +55,6 @@ public class ViatorItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable("tooltip.cartocraft.viator"));
+        tooltip.add(Text.translatable("tooltip.cartocraft.voidtant"));
     }
 }

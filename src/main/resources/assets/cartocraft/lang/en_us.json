@@ -5,7 +5,7 @@
   "item.cartocraft.infernose": "Infernose",
   "item.cartocraft.sextant": "Sextant",
   "item.cartocraft.telosmeter": "Telosmeter",
-  "item.cartocraft.viator": "Viator",
+  "item.cartocraft.voidtant": "Voidtant",
   "msg.cartocraft.position": "Position >> X: %1$s Z: %2$s",
   "msg.cartocraft.sealevel": "Distance to the sea level: %s meter(s)",
   "tooltip.cartocraft.barometer": "Use this to confirm your altitude",
@@ -14,5 +14,5 @@
   "tooltip.cartocraft.infernose": "Use this to confirm your position in the nether",
   "tooltip.cartocraft.sextant": "Use this towards the sun to confirm your position",
   "tooltip.cartocraft.telosmeter": "Use this to confirm your position in the end",
-  "tooltip.cartocraft.viator": "Use this to confirm your position and altitude in any dimension"
+  "tooltip.cartocraft.voidtant": "Use this to confirm your position and altitude in any dimension"
 }
