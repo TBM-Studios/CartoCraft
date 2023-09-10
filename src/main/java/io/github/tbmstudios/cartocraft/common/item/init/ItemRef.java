@@ -16,7 +16,7 @@ public enum ItemRef implements Supplier<Item> {
     INFERNTANT(new InferntantItem()),
     TERRATANT(new TerratantItem()),
     INFERNOSE(new InfernoseItem()),
-    TELOSMETER(new TelosmeterItem()),
+    VOIDOSE(new VoidoseItem()),
     VOIDTANT(new VoidtantItem());
     private final Item item;
 

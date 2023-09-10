@@ -17,8 +17,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class TelosmeterItem extends Item {
-    public TelosmeterItem() {
+public class VoidoseItem extends Item {
+    public VoidoseItem() {
         super(new Settings().maxCount(1));
     }
 
@@ -51,6 +51,6 @@ public class TelosmeterItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable("tooltip.cartocraft.telosmeter"));
+        tooltip.add(Text.translatable("tooltip.cartocraft.voidose"));
     }
 }
