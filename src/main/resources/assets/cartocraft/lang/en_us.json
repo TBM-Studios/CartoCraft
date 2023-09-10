@@ -2,7 +2,7 @@
   "item.cartocraft.barometer": "Barometer",
   "item.cartocraft.inferntant": "Inferntant",
   "item.cartocraft.terratant": "Terratant",
-  "item.cartocraft.katometer": "Katometer",
+  "item.cartocraft.infernose": "Infernose",
   "item.cartocraft.sextant": "Sextant",
   "item.cartocraft.telosmeter": "Telosmeter",
   "item.cartocraft.viator": "Viator",
@@ -11,7 +11,7 @@
   "tooltip.cartocraft.barometer": "Use this to confirm your altitude",
   "tooltip.cartocraft.inferntant": "Use this to confirm your position and altitude in the nether",
   "tooltip.cartocraft.terratant": "Use this towards the sun to confirm your position and altitude",
-  "tooltip.cartocraft.katometer": "Use this to confirm your position in the nether",
+  "tooltip.cartocraft.infernose": "Use this to confirm your position in the nether",
   "tooltip.cartocraft.sextant": "Use this towards the sun to confirm your position",
   "tooltip.cartocraft.telosmeter": "Use this to confirm your position in the end",
   "tooltip.cartocraft.viator": "Use this to confirm your position and altitude in any dimension"
