@@ -1,18 +1,18 @@
 {
   "item.cartocraft.barometer": "Barometer",
-  "item.cartocraft.inferntant": "Inferntant",
-  "item.cartocraft.terratant": "Terratant",
   "item.cartocraft.infernose": "Infernose",
+  "item.cartocraft.inferntant": "Inferntant",
   "item.cartocraft.terraose": "Terraose",
+  "item.cartocraft.terratant": "Terratant",
   "item.cartocraft.voidose": "Voidose",
   "item.cartocraft.voidtant": "Voidtant",
   "msg.cartocraft.position": "Position >> X: %1$s Z: %2$s",
   "msg.cartocraft.sealevel": "Distance to the sea level: %s meter(s)",
   "tooltip.cartocraft.barometer": "Use this to confirm your altitude",
-  "tooltip.cartocraft.inferntant": "Use this to confirm your position and altitude in the nether",
-  "tooltip.cartocraft.terratant": "Use this towards the sun to confirm your position and altitude",
   "tooltip.cartocraft.infernose": "Use this to confirm your position in the nether",
+  "tooltip.cartocraft.inferntant": "Use this to confirm your position and altitude in the nether",
   "tooltip.cartocraft.terraose": "Use this towards the sun to confirm your position",
+  "tooltip.cartocraft.terratant": "Use this towards the sun to confirm your position and altitude",
   "tooltip.cartocraft.voidose": "Use this to confirm your position in the end",
   "tooltip.cartocraft.voidtant": "Use this to confirm your position and altitude in any dimension"
 }

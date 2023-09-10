@@ -11,11 +11,11 @@ import java.util.Locale;
 import java.util.function.Supplier;
 
 public enum ItemRef implements Supplier<Item> {
-    TERRAOSE(new TerraoseItem()),
     BAROMETER(new BarometerItem()),
-    INFERNTANT(new InferntantItem()),
-    TERRATANT(new TerratantItem()),
     INFERNOSE(new InfernoseItem()),
+    INFERNTANT(new InferntantItem()),
+    TERRAOSE(new TerraoseItem()),
+    TERRATANT(new TerratantItem()),
     VOIDOSE(new VoidoseItem()),
     VOIDTANT(new VoidtantItem());
     private final Item item;
