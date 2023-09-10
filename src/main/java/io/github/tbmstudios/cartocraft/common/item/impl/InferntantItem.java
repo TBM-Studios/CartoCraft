@@ -17,8 +17,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MultiKatometerItem extends Item {
-    public MultiKatometerItem() {
+public class InferntantItem extends Item {
+    public InferntantItem() {
         super(new Settings().maxCount(1));
     }
 
@@ -56,6 +56,6 @@ public class MultiKatometerItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable("tooltip.cartocraft.multi_katometer"));
+        tooltip.add(Text.translatable("tooltip.cartocraft.inferntant"));
     }
 }

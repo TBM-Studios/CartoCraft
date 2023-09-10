@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public enum ItemRef implements Supplier<Item> {
     SEXTANT(new SextantItem()),
     BAROMETER(new BarometerItem()),
-    MULTI_KATOMETER(new MultiKatometerItem()),
+    INFERNTANT(new InferntantItem()),
     TERRATANT(new TerratantItem()),
     KATOMETER(new KatometerItem()),
     TELOSMETER(new TelosmeterItem()),
