@@ -40,7 +40,8 @@ public class VoidtantItem extends Item {
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         super.onStoppedUsing(stack, world, user, remainingUseTicks);
-        if (world.isClient || !(user instanceof PlayerEntity player)) return;
+        if (world.isClient || !world.getRegistryKey().equals(World.END) || !(user instanceof PlayerEntity player))
+            return;
         player.getItemCooldownManager().set(this, 60);
         world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
